@@ -52,22 +52,21 @@ if __name__=='__main__':
     print("Balance in Jane Smith's Checking Account $",jane_checking.balance)
 
     # Create transaction objects
-    transactions1= [
-    transaction("T001", john_savings, None, 1000),
-    transaction("T002", None, jane_checking, 200),
-    transaction("T003", john_checking, jane_savings, 300)]
+    transactions1=transaction("T001", john_savings, jane_savings, 1000),
+    transactions2=transaction("T002", john_savings, jane_checking, 200),
+    transactions3=transaction("T003", john_checking, jane_savings, 300)
 
 
-    # Display transaction details
-    print("\nTransaction Details:")
-    for transactions in transactions1:
-        print(transactions.get_transaction_details())
-        print("details")
-        
+    # # Display transaction details
+    # print("\nTransaction Details:")
+    # for transactions in transactions1:
+    #     print(transactions.get_transaction_details())
+    #     print("details")
+
 
     # Display transaction history for Jane Smith's Savings Account
     print("\nTransaction History for Jane Smith's Savings Account:")
-    jane_savings_history= transactions.get_transaction_history(jane_savings_account)
+    jane_savings_history= transaction.get_transaction_history(jane_savings)
     for transaction_details in jane_savings_history:
         print(transaction_details)
 
