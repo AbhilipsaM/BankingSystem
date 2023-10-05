@@ -62,6 +62,8 @@ if __name__=='__main__':
     print("\nTransaction Details:")
     for transactions in transactions1:
         print(transactions.get_transaction_details())
+        print("details")
+        
 
     # Display transaction history for Jane Smith's Savings Account
     print("\nTransaction History for Jane Smith's Savings Account:")
